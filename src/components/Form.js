@@ -1,10 +1,10 @@
-//import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import React from "react";
 
 class Form extends React.Component {
   render() {
-    const {
+    /* const {
       cardName,
       cardDescription,
       cardAttr1,
@@ -17,7 +17,7 @@ class Form extends React.Component {
       isSaveButtonDisabled,
       onInputChange,
       onSaveButtonClick
-    } = this.props
+    } = this.props */
     return (
       <form>
         <label htmlFor='name-input'>
@@ -88,7 +88,7 @@ class Form extends React.Component {
     );
   }
 };
-form.propTypes = {
+/* form.propTypes = 
   cardName,
   cardDescription,
   cardAttr1,
@@ -96,12 +96,12 @@ form.propTypes = {
   cardAttr3,
   cardImage,
   cardRare,
-  cardTrunfo
-  //hasTrunfo,
-  //isSaveButtonDisabled,
-  //onInputChange,
-  //onSaveButtonClick
-};
+  cardTrunfo */
+  // hasTrunfo,
+  // isSaveButtonDisabled,
+  // onInputChange,
+  // onSaveButtonClick
+
 
 export default Form;
-//corriginto espaçamento
+// corriginto espaçamento
