@@ -43,7 +43,16 @@ class App extends React.Component {
     this.setState({ [id]: value }, this.btnValidation);
   }
 
+  superT = () => {
+    /* const supT = cardTrunfo.checked === true ? hasTrunfo :  */
+    const { cardTrunfo } = this.state;
+    if (cardTrunfo === true) {
+      this.setState({ hasTrunfo: true });
+    }
+  }
+
   onSaveButtonClick = () => {
+    this.superT();
     this.setState({
       cardName: '',
       cardDescription: '',
@@ -52,6 +61,7 @@ class App extends React.Component {
       cardAttr3: '0',
       cardImage: '',
       cardRare: 'normal',
+      cardTrunfo: false,
     });
   }
 
