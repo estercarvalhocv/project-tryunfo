@@ -67,15 +67,15 @@ class Form extends React.Component {
             />
           </label>
           <label htmlFor="image-input">
-          Imagem
-          <input
-            data-testid="image-input"
-            value={ cardImage }
-            onChange={ onInputChange }
-            type="text"
-            id="image-input"
-          />
-        </label>
+            Imagem
+            <input
+              data-testid="image-input"
+              value={ cardImage }
+              onChange={ onInputChange }
+              type="text"
+              id="image-input"
+            />
+          </label>
           <label htmlFor="rare-input">
             Raridade da Carta
             <select
