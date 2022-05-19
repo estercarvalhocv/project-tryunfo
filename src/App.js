@@ -7,8 +7,8 @@ class App extends React.Component {
     return (
       <div>
         <h1>Adiciona nova carta</h1>
-        <Form />
-        <Card />
+        <Form { ...this.state } onInputChange={ this.handleChange } />
+        <Card { ...this.state } />
       </div>
     );
   }
