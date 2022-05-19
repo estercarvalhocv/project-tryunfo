@@ -99,7 +99,7 @@ class Form extends React.Component {
               checked={ cardTrunfo }
               onChange={ onInputChange }
               type="checkbox"
-              id="trunfo-input"
+              id="cardTrunfo"
             />
             Super Trybe Trunfo
           </label>

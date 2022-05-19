@@ -11,12 +11,37 @@ class App extends React.Component {
     cardAttr3: '',
     cardImage: '',
     cardRare: '',
-    cardTrunfo: true,
+    cardTrunfo: false,
+    isSaveButtonDisabled: true,
   };
 
-  handleChange = (event) => {
-    this.setState({ [event.target.id]: event.target.value });
-  };
+  btnValidation = () => {
+    const sumMax = 210;
+    const maxAttr = 90;
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+    } = this.state;
+
+    if (cardName && cardImage && cardDescription
+      && Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3) <= sumMax
+      && cardAttr1 <= maxAttr && cardAttr1 >= 0 && cardAttr2 <= maxAttr
+      && cardAttr2 >= 0 && cardAttr3 <= maxAttr && cardAttr3 >= 0) {
+      this.setState({ isSaveButtonDisabled: false });
+    } else {
+      this.setState({ isSaveButtonDisabled: true });
+    }
+  }
+
+  handleChange= ({ target }) => {
+    const { id } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    this.setState({ [id]: value }, this.btnValidation);
+  }
 
   render() {
     return (
